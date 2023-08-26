@@ -8,6 +8,7 @@ import Products from "./pages/products/Products";
 import Users from "./pages/users/Users";
 
 function App() {
+  const Layout = () => {};
   const router = createBrowserRouter([
     { path: "/", element: <Home /> },
     { path: "login", element: <Login /> },
