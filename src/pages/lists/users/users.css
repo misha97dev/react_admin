@@ -1,0 +1,10 @@
+tr {
+  @apply border-b-[1px] border-gray-500 border-solid;
+}
+td,
+th {
+  @apply p-[12px];
+}
+th {
+  font-size: 20px;
+}

@@ -1,0 +1,7 @@
+.header__icons img {
+  cursor: pointer;
+  min-width: 20px;
+}
+.header__avatar {
+  min-width: 44px !important;
+}
