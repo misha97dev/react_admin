@@ -10,7 +10,7 @@ const UserInfo = () => {
     (state: any) => state.users
   );
   const id: number = Number(useParams().id);
-  const birth: string = "";
+  let birth: string = "";
   const dispatch: any = useDispatch();
   const [user, setUser] = useState<IUserSimple>();
   useEffect(() => {
@@ -29,11 +29,8 @@ const UserInfo = () => {
     const month = (parsedDate.getMonth() + 1).toString().padStart(2, "0");
     const year = parsedDate.getFullYear();
     const result = `${day}.${month}.${year}`;
-    console.log(result);
     return result;
   };
-  console.log(user);
-
   return (
     <div>
       {loading ? (
@@ -49,6 +46,7 @@ const UserInfo = () => {
                 {user.first_name + " " + user.last_name}
               </div>
               <div className="user-info__birth">
+                {birth}
                 Birth:{birth && " " + birth}
               </div>
             </div>

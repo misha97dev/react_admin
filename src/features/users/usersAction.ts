@@ -18,9 +18,8 @@ export const getAllUsers = createAsyncThunk(
 export const getOneUser = createAsyncThunk(
   "getOneUser",
   async (userId: number, thunkAPI) => {
-    // userId is passed here
     try {
-      const response = await axios.get(`${url}/${userId}`); // Use userId in the URL
+      const response = await axios.get(`${url}/${userId}`);
       return response.data;
     } catch (err: any) {
       const message = (err.response && err.response.data) || err.message;
